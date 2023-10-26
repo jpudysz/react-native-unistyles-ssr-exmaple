@@ -1,0 +1,32 @@
+{
+  "name": "unistyles-ssr",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/react": "18.2.33",
+    "@typescript-eslint/eslint-plugin": "6.9.0",
+    "@typescript-eslint/eslint-plugin-tslint": "6.9.0",
+    "@typescript-eslint/parser": "6.9.0",
+    "eslint": "8.52.0",
+    "eslint-config-codemask": "1.1.7",
+    "eslint-plugin-functional": "6.0.0",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-jsdoc": "46.8.2",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-nested-if": "1.0.0",
+    "eslint-plugin-no-else": "0.2.2",
+    "eslint-plugin-no-loops": "0.3.0",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "turbo": "1.10.16",
+    "typescript": "5.2.2"
+  },
+  "scripts": {
+    "web": "cd apps/next && yarn next"
+  },
+  "packageManager": "yarn@3.4.1"
+}
