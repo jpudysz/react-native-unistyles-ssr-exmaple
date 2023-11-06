@@ -11,22 +11,24 @@ export const HomeScreen = () => {
         setIsClient(true)
     }, [])
 
-    return (
+    return isClient ? (
         <View style={styles.container}>
             <Text style={styles.text}>
                 Welcome to Expo + Next.js + Unistyles 👋
             </Text>
             <Text>
-                Current breakpoint: {isClient ? breakpoint : ''}
+                Current breakpoint: {breakpoint}
             </Text>
             <Text>
                 I like {theme.colors.barbie} color
             </Text>
-            <TextLink href="/user/unistyles">
-                Go to magic place 🦄
-            </TextLink>
+            <View style={styles.linksContainer}>
+                <TextLink href="/user/unistyles">
+                    Go to magic place 🦄
+                </TextLink>
+            </View>
         </View>
-    )
+    ) : null
 }
 
 const stylesheet = createStyleSheet(theme => ({
@@ -42,5 +44,12 @@ const stylesheet = createStyleSheet(theme => ({
     text: {
         fontSize: 16,
         color: theme.colors.typography
+    },
+    linksContainer:{
+        display: {
+            xs: 'none',
+            xl: 'flex'
+        },
+        flexDirection: 'row'
     }
 }))

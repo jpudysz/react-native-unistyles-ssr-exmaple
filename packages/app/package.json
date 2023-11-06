@@ -9,7 +9,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.6",
-    "react-native-unistyles": "1.1.2",
+    "react-native-unistyles": "1.1.4",
     "react-native-web": "0.19.9",
     "solito": "4.1.3"
   },
