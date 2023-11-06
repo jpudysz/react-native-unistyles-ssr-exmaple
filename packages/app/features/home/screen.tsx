@@ -36,7 +36,7 @@ const stylesheet = createStyleSheet(theme => ({
         alignItems: 'center',
         backgroundColor: {
             xs: theme.colors.oak,
-            md: theme.colors.backgroundColor
+            md: theme.colors.aloes
         }
     },
     text: {
