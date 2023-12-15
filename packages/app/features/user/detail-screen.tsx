@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import { TextLink } from 'solito/link'
-import { createStyleSheet, useStyles } from 'app/provider/styles'
+import { createStyleSheet, useStyles } from 'react-native-unistyles'
 
 export const UserDetailScreen = () => {
     const { styles } = useStyles(stylesheet)

@@ -3,6 +3,7 @@
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
 import * as React from 'react'
 import { AppRegistry } from 'react-native'
+import '../styles'
 
 export const style = `
 /**

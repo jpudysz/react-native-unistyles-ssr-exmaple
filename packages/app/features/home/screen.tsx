@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Text, View } from 'react-native'
-import { createStyleSheet, useStyles } from 'app/provider/styles'
+import { ActivityIndicator, Text, View, StyleSheet } from 'react-native'
+import { createStyleSheet, useStyles } from 'react-native-unistyles'
 import { TextLink } from 'solito/link'
 
 export const HomeScreen = () => {
@@ -11,13 +11,13 @@ export const HomeScreen = () => {
         setIsClient(true)
     }, [])
 
-    return isClient ? (
+    return (
         <View style={styles.container}>
             <Text style={styles.text}>
                 Welcome to Expo + Next.js + Unistyles 👋
             </Text>
             <Text>
-                Current breakpoint: {breakpoint}
+                Current breakpoint: {isClient ? breakpoint : null}
             </Text>
             <Text>
                 I like {theme.colors.barbie} color
@@ -27,8 +27,13 @@ export const HomeScreen = () => {
                     Go to magic place 🦄
                 </TextLink>
             </View>
+            {!isClient && (
+                <View style={styles.loader}>
+                    <ActivityIndicator />
+                </View>
+            )}
         </View>
-    ) : null
+    )
 }
 
 const stylesheet = createStyleSheet(theme => ({
@@ -51,5 +56,11 @@ const stylesheet = createStyleSheet(theme => ({
             xl: 'flex'
         },
         flexDirection: 'row'
+    },
+    loader: {
+        ...StyleSheet.absoluteFillObject,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: theme.colors.backgroundColor
     }
 }))
